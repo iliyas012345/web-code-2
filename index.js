@@ -20,6 +20,7 @@ const app=express()
 const PORT=process.env.PORT
 
 app.get("/", (req, res)=>{
+    res.status(500)
     res.send("Hello i'm working fine")
  })
 
