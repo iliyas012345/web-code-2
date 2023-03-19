@@ -14,4 +14,4 @@ export function connectDataBase(){
         
     }
 }
-export default mongoose
+//export default mongoose

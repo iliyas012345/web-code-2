@@ -33,3 +33,4 @@ router.post("/", async(req, res)=>{
 //login
 
 export const signupRouter = router; 
+//mongodb+srv://iliyas:iliyas123@cluster0.8kghzn3.mongodb.net/

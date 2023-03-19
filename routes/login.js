@@ -2,6 +2,7 @@ import express from "express"
 import { generateAuthToken, User} from "../models/users.js"
 import bcrypt from "bcrypt"
 const router = express.Router()
+
 router.post("/", async(req, res)=>{
     try {
         
