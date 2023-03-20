@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv"
 
-export function connectDataBase(){
+export function dataBaseConnection(){
     const params={
         useNewUrlParser:true,
         useUnifiedTopology:true,
@@ -14,4 +14,4 @@ export function connectDataBase(){
         
     }
 }
-//export default mongoose
+// export default mongoose

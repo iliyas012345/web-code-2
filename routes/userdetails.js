@@ -1,6 +1,6 @@
 import express from "express"
 import { isSignedIn } from "../controllers/product.js";
-import { createControl, deleteControl, getControl, getControlById, updateControl } from "../middle/admin.js";
+
 import { Control } from "../models/Admin.js"
 import { Product } from "../models/product.js"
 import bcrypt from "bcrypt"

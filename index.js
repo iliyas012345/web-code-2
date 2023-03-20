@@ -1,7 +1,7 @@
 import  dotenv from "dotenv"
 import express from "express"
 import cors from "cors"
-import { connectDataBase } from "./db.js"
+import {  dataBaseConnection } from "./db.js"
 import { signupRouter } from "./routes/user.js"
 import {  loginRouter } from "./routes/login.js"
 import { productRouter } from "./routes/product.js"
@@ -13,10 +13,11 @@ import { User } from "./models/users.js"
 import { Product } from "./models/product.js"
 import { Admin } from "./models/Adminlogin.js"
 import { isAdminSignedIn } from "./controllers/Admin.js"
-isAdminSignedIn
+import mongoose from "mongoose"
+
 dotenv.config()
 
-connectDataBase()
+dataBaseConnection()
 
 const app=express()
 const PORT=process.env.PORT
