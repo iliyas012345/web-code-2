@@ -1,7 +1,7 @@
 import express from "express"
 import { isSignedIn } from "../controllers/product.js";
 
-import { Control } from "../models/Admin.js"
+import { Control } from "../models/admin.js"
 import { Product } from "../models/product.js"
 import bcrypt from "bcrypt"
 import { isAdminSignedIn } from "../controllers/Admin.js";

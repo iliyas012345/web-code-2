@@ -11,7 +11,7 @@ const contorlerSchema= new mongoose.Schema(
           },
           Price : {type :String, 
             require:true,
-            ref:'user'},
+            },
            
           image:{
             type:String,
