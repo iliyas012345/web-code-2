@@ -1,6 +1,7 @@
 import express from "express"
-import {Admin, generateAuthToke } from "../models/users.js"
+import { generateAuthToke } from "../models/Adminlogin.js"
 import bcrypt from "bcrypt"
+import { Admin } from "../models/Adminlogin.js"
 
 
 const router = express.Router()

@@ -1,5 +1,6 @@
 import  jwt  from "jsonwebtoken";
-import { Admin } from "../models/users.js";
+import { Admin } from "../models/Adminlogin.js";
+
 const isAdminSignedIn = async(req, res, next) => {
     let token; 
     if (req.headers){

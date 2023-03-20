@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import jwt from "jsonwebtoken"
-
-const userSchema=new mongoose.Schema(
+//Admin
+const adminSchema=new mongoose.Schema(
     {
         name:{
             type:String,
@@ -23,10 +23,8 @@ const userSchema=new mongoose.Schema(
     }
 
 )
-const generateAuthToken=(id)=>{
+const generateAuthToke=(id)=>{
     return jwt.sign({id},process.env.Secretkey)
 }
-const User=mongoose.model("user",userSchema)
-export {User,generateAuthToken}
-
-
+const Admin=mongoose.model("admin",adminSchema)
+export {Admin,generateAuthToke}

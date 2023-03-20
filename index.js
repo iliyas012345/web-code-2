@@ -11,7 +11,9 @@ import { adminLoginRouter } from "./routes/adminlogin.js"
 import { controlRouter } from "./routes/userdetails.js"
 import { User } from "./models/users.js"
 import { Product } from "./models/product.js"
-
+import { Admin } from "./models/Adminlogin.js"
+import { isAdminSignedIn } from "./controllers/Admin.js"
+isAdminSignedIn
 dotenv.config()
 
 connectDataBase()
@@ -32,6 +34,6 @@ app.use("/api/login",loginRouter)
 app.use("/api/product",isSignedIn,productRouter)
 app.use("/api/signadmin",adminSignupRouter)
 app.use("/api/loginadmin",adminLoginRouter)
-app.use("/api/control",controlRouter)
+app.use("/api/control",isAdminSignedIn,controlRouter)
 
 app.listen(PORT,()=>console.log(`server is up and running in port ${PORT}`))
